@@ -35,5 +35,10 @@ namespace GameHangman
             string stateOfGuessing = currentGameState;
             return stateOfGuessing;
         }
+
+        public void guess(char guessLetter)
+        {
+            currentGameState = "t__t";
+        }
     }
 }
