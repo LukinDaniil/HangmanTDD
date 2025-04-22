@@ -23,5 +23,12 @@ namespace GameHangman
         {
             this.remainingAttempts = newRemainingAttempts;
         }
+
+        public string checkCurrentGameState()
+        {
+            //todo реализовать установку stateOfGuessing согласно загаданному слову
+            string stateOfGuessing = "____";
+            return stateOfGuessing;
+        }
     }
 }
