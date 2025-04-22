@@ -32,7 +32,6 @@ namespace GameHangman
 
         public string checkCurrentGameState()
         {
-            //todo реализовать установку stateOfGuessing согласно загаданному слову
             string stateOfGuessing = currentGameState;
             return stateOfGuessing;
         }

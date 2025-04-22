@@ -41,5 +41,12 @@ namespace HangmanTDDnUnitTests
             Hangman hangman = new Hangman("test2");
             Assert.AreEqual("_____", hangman.checkCurrentGameState());
         }
+        [Test]
+        public void HangManClassGuessWordTest()
+        {
+            Hangman hangman = new Hangman("test");
+            hangman.guess('t');
+            Assert.AreEqual("t__t", hangman.checkCurrentGameState());
+        }
     }
 }
