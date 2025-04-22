@@ -47,6 +47,7 @@ namespace GameHangman
                     currentGameState = new string(currentStateArray);
                 }
             }
+            setRemainingAttempts(4);
         }
     }
 }
