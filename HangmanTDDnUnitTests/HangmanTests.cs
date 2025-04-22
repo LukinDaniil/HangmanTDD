@@ -83,5 +83,13 @@ namespace HangmanTDDnUnitTests
             hangman.guess('t');
             Assert.IsTrue(hangman.gameWon());
         }
+        [Test]
+        public void HangManClassWinConditionFailTest()
+        {
+            Hangman hangman = new Hangman("test");
+            hangman.guess('t');
+            hangman.guess('e');
+            Assert.IsFalse(hangman.gameWon());
+        }
     }
 }
