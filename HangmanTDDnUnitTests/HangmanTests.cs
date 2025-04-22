@@ -16,6 +16,12 @@ namespace HangmanTDDnUnitTests
             Hangman hangman = new Hangman();
             Assert.NotNull(hangman);
         }
+        public void HangManClassGameInitialisationTest()
+        {
+            Hangman hangman = new Hangman("test");
+            Assert.AreEqual("test", hangman.hiddenWord);
+        }
+
 
     }
 }
