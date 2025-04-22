@@ -1,3 +1,4 @@
+using GameHangman;
 using NUnit.Framework;
 
 namespace HangmanTDDnUnitTests
