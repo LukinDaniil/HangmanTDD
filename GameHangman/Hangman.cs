@@ -38,16 +38,22 @@ namespace GameHangman
 
         public void guess(char guessLetter)
         {
-            for (int i = 0; i < hiddenWord.Length; i ++)
-            {
-                if (hiddenWord[i] == guessLetter)
+            if(hiddenWord.Contains(guessLetter))
+            { 
+                for (int i = 0; i < hiddenWord.Length; i ++)
                 {
-                    char[] currentStateArray = currentGameState.ToCharArray();
-                    currentStateArray[i] = guessLetter;
-                    currentGameState = new string(currentStateArray);
+                    if (hiddenWord[i] == guessLetter)
+                    {
+                        char[] currentStateArray = currentGameState.ToCharArray();
+                        currentStateArray[i] = guessLetter;
+                        currentGameState = new string(currentStateArray);
+                    }
                 }
             }
-            setRemainingAttempts(4);
+            else
+            {
+                setRemainingAttempts(remainingAttempts - 1);
+            } 
         }
     }
 }
