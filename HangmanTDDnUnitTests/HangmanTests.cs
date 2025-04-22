@@ -10,9 +10,11 @@ namespace HangmanTDDnUnitTests
         }
 
         [Test]
-        public void Test1()
+        public void HangManClassCreationTest()
         {
-            Assert.Pass();
+            Hangman hangman = new Hangman();
+            Assert.NotNull(hangman);
         }
+
     }
 }
