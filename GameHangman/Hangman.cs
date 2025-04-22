@@ -8,5 +8,11 @@ namespace GameHangman
 {
     public class Hangman
     {
+        public string hiddenWord;
+
+        public Hangman(string wordForGuessing)
+        {
+            this.hiddenWord = wordForGuessing;
+        }
     }
 }
