@@ -21,6 +21,12 @@ namespace HangmanTDDnUnitTests
             Hangman hangman = new Hangman("test");
             Assert.AreEqual("test", hangman.hiddenWord);
         }
+        public void HangManClassSettingOfRemainingAttemptsTest()
+        {
+            Hangman hangman = new Hangman();
+            hangman.setRemainingAttempts(5);
+            Assert.AreEqual(5, hangman.remainingAttempts);
+        }
 
 
     }
