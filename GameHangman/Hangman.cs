@@ -10,6 +10,10 @@ namespace GameHangman
     {
         public string hiddenWord;
 
+        public Hangman()
+        {
+        }
+
         public Hangman(string wordForGuessing)
         {
             this.hiddenWord = wordForGuessing;
