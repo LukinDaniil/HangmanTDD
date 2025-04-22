@@ -38,7 +38,15 @@ namespace GameHangman
 
         public void guess(char guessLetter)
         {
-            currentGameState = "t__t";
+            for (int i = 0; i < hiddenWord.Length; i ++)
+            {
+                if (hiddenWord[i] == guessLetter)
+                {
+                    char[] currentStateArray = currentGameState.ToCharArray();
+                    currentStateArray[i] = guessLetter;
+                    currentGameState = new string(currentStateArray);
+                }
+            }
         }
     }
 }
