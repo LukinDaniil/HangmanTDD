@@ -73,5 +73,15 @@ namespace HangmanTDDnUnitTests
             Assert.AreEqual("____", hangman.checkCurrentGameState());
             Assert.AreEqual(3, hangman.remainingAttempts);
         }
+        [Test]
+        public void HangManClassWinConditionTest()
+        {
+            Hangman hangman = new Hangman("test");
+            hangman.guess('t');
+            hangman.guess('e');
+            hangman.guess('s');
+            hangman.guess('t');
+            Assert.IsTrue(hangman.gameWon());
+        }
     }
 }
