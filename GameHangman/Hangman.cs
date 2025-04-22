@@ -9,7 +9,7 @@ namespace GameHangman
     public class Hangman
     {
         public string hiddenWord;
-
+        public int remainingAttempts;
         public Hangman()
         {
         }
@@ -17,6 +17,11 @@ namespace GameHangman
         public Hangman(string wordForGuessing)
         {
             this.hiddenWord = wordForGuessing;
+        }
+
+        public void setRemainingAttempts(int newRemainingAttempts)
+        {
+            this.remainingAttempts = newRemainingAttempts;
         }
     }
 }
