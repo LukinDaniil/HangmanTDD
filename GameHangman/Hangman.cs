@@ -58,7 +58,7 @@ namespace GameHangman
 
         public bool? gameWon()
         {
-            return true;
+            return currentGameState == hiddenWord;  
         }
     }
 }
