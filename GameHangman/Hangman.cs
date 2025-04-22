@@ -10,7 +10,7 @@ namespace GameHangman
     {
         public string hiddenWord;
         public int remainingAttempts;
-        private string currentGameState;
+        public string currentGameState;
         public Hangman()
         {
         }
@@ -56,7 +56,7 @@ namespace GameHangman
             } 
         }
 
-        public bool? gameWon()
+        public bool gameWon()
         {
             return currentGameState == hiddenWord;  
         }
