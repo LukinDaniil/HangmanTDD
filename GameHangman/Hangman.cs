@@ -10,6 +10,7 @@ namespace GameHangman
     {
         public string hiddenWord;
         public int remainingAttempts;
+        private string currentGameState;
         public Hangman()
         {
         }
@@ -17,6 +18,11 @@ namespace GameHangman
         public Hangman(string wordForGuessing)
         {
             this.hiddenWord = wordForGuessing;
+            currentGameState = "";
+            for (int i = 0; i < hiddenWord.Length; i ++)
+            {
+                currentGameState += "_";
+            }
         }
 
         public void setRemainingAttempts(int newRemainingAttempts)
@@ -27,7 +33,7 @@ namespace GameHangman
         public string checkCurrentGameState()
         {
             //todo реализовать установку stateOfGuessing согласно загаданному слову
-            string stateOfGuessing = "____";
+            string stateOfGuessing = currentGameState;
             return stateOfGuessing;
         }
     }
