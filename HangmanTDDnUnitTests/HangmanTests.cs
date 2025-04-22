@@ -55,5 +55,14 @@ namespace HangmanTDDnUnitTests
             hangman.guess('e');
             Assert.AreEqual("_e__", hangman.checkCurrentGameState());
         }
+        [Test]
+        public void HangManClassGuessWordFailTest()
+        {
+            Hangman hangman = new Hangman("test");
+            hangman.setRemainingAttempts(5);
+            hangman.guess('a');
+            Assert.AreEqual("____", hangman.checkCurrentGameState());
+            Assert.AreEqual(4, hangman.remainingAttempts);
+        }
     }
 }
