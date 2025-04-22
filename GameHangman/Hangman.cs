@@ -55,5 +55,10 @@ namespace GameHangman
                 setRemainingAttempts(remainingAttempts - 1);
             } 
         }
+
+        public bool? gameWon()
+        {
+            return true;
+        }
     }
 }
